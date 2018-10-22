@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20181021084542) do
     t.string   "title"
     t.text     "description", limit: 65535
     t.string   "image_url"
-    t.decimal  "price",                     precision: 8, scale: 2
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
+    t.integer  "price"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
