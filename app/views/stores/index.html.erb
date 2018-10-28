@@ -1,0 +1,20 @@
+<% if flash[:notice] %>
+<p><%= flash[:notice] %></p>
+<% end %>
+
+<h1>プログラマティック カタログ</h1>
+
+<% @products.each do |product| %>
+  <div class="entry">
+<!--    画像ファイルにリンクを持たせる-->
+    <%= link_to product_path(product) do%>
+      <%= image_tag(product.image_url) %>
+    <% end %>
+<!--    ここまで-->
+
+    <h3><%= product.title %></h3>
+    <p class="description"><%= truncate(sanitize(product.description), length: 140) %></p>
+    <div class="price_line"><%= number_to_currency(product.price) %>
+    </div>
+  </div>
+<% end %>

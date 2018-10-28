@@ -24,4 +24,3 @@ module DepotA
   end
 end
 
-# config.i18n.default_locale = :ja

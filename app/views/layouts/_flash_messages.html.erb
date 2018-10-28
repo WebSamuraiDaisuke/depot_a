@@ -1,0 +1,5 @@
+<% flash.each do |massage_type, message| %>
+  <div class="alert alert-<%= massage_type %>">
+    <%= message %>
+  </div>
+<% end %>
