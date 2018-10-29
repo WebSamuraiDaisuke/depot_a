@@ -22,8 +22,11 @@
   </div>
 
   <div class="field">
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
+    <%#= f.label :image_url %>
+    <%#= f.text_field :image_url %>
+    <span class="picture">
+    <%= f.file_field :picture %>
+  </span>
   </div>
 
   <div class="field">

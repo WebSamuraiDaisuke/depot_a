@@ -54,4 +54,5 @@ Rails.application.configure do
 
   #SSL
   # config.force_ssl = true
+  require 'carrierwave/orm/activerecord'
 end

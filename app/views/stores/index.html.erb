@@ -1,9 +1,9 @@
 <% if flash[:notice] %>
-<p><%= flash[:notice] %></p>
+<p class="text-center"><%= flash[:notice] %></p>
 <% end %>
 
-<h1>プログラマティック カタログ</h1>
-
+<h1 class="text-center">プログラマティック カタログ</h1>
+<div class="col-md-9 offset-md-1">
 <% @products.each do |product| %>
   <div class="entry">
 <!--    画像ファイルにリンクを持たせる-->
@@ -14,7 +14,7 @@
 
     <h3><%= product.title %></h3>
     <p class="description"><%= truncate(sanitize(product.description), length: 140) %></p>
-    <div class="price_line"><%= number_to_currency(product.price) %>
-    </div>
+    <div class="price_line"><%= number_to_currency(product.price) %></div>
   </div>
 <% end %>
+</div>
