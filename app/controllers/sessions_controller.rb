@@ -16,6 +16,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[id] = nil
+    flash[:success] = 'ログアウトに成功しました'
+    redirect_to root_path
   end
 
   def login(email, password)

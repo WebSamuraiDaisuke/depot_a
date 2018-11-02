@@ -14,7 +14,11 @@
 
     <h3><%= product.title %></h3>
     <p class="description"><%= truncate(sanitize(product.description), length: 140) %></p>
-    <div class="price_line"><%= number_to_currency(product.price) %></div>
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(product.price, :locale => 'jp') %></span>
+      <%= button_to 'カートに入れる', line_item_path(product_id: product) %>
+    </div>
+
   </div>
 <% end %>
 </div>
